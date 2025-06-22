@@ -46,3 +46,23 @@ function checkEligibility(age, isEmployed) {
         return "Not Eligible";
     }
 }
+////////////
+//TASK 4 /////////////////
+//////////
+function calculateTotalCost(price, taxRate, discount) {
+    // Calculate base cost
+    let baseTotal = price * (1 + taxRate);
+    
+    // Check if discount parameter is provided
+    if (discount !== undefined) {
+        // Subtract discount from base total
+        baseTotal = baseTotal - discount;
+    }
+    
+    return baseTotal.toFixed(2);
+}
+
+    ///Testing cases(price, taxes, discount)///
+console.log(calculateTotalCost(100, 0.1, 15));
+console.log(calculateTotalCost(100, .10, undefined));
+console.log(calculateTotalCost(50, 0.08, 5)); 
